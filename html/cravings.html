@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cravings - Prince Isaac Portfolio</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .project-hero {
+        min-height: 100vh;
+        background: #f8f9fa;
+        color: #333;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .project-hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+      }
+
+      .project-hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+
+      .project-hero p {
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .project-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .detail-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        border: 1px solid #e5e7eb;
+      }
+
+      .detail-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .detail-item h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .detail-item ul {
+        list-style: none;
+      }
+
+      .detail-item li {
+        margin-bottom: 0.5rem;
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      .detail-item p {
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      .project-section {
+        padding: 4rem 0;
+      }
+
+      .project-section img {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        display: block;
+      }
+
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .back-button:hover {
+        background: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .project-logo {
+        text-align: center;
+        margin: 3rem 0;
+      }
+
+      .project-logo img {
+        width: 120px;
+        height: 120px;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-logo p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 1rem;
+        color: #ff6b6b;
+      }
+
+      /* Responsive design for mobile */
+      @media (max-width: 768px) {
+        .project-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .project-hero p {
+          font-size: 1.2rem;
+        }
+
+        .project-details {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .detail-item {
+          padding: 1rem;
+        }
+
+        .project-logo img {
+          width: 150px;
+          height: 150px;
+        }
+
+        .project-logo p {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .project-hero h1 {
+          font-size: 2rem;
+        }
+
+        .project-logo p {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html" class="back-button">← Back to Portfolio</a>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-content">
+        <h1>Hello 👋🏻, this is Cravings</h1>
+        <p>
+          Satisfy your cravings, pronto - Get food delivered to your doorstep
+        </p>
+
+        <div class="project-details">
+          <div class="detail-item">
+            <h3>ROLE</h3>
+            <ul>
+              <li>UI Designer</li>
+              <li>UX Designer</li>
+              <li>User Research</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <h3>INDUSTRY</h3>
+            <ul>
+              <li>Food Delivery</li>
+              <li>Mobile App</li>
+              <li>Web Application</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <h3>TEAM</h3>
+            <ul>
+              <li>Product Manager</li>
+              <li>App Developer (iOS & Android)</li>
+              <li>Web Developers</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <h3>YEAR</h3>
+            <p>2022</p>
+          </div>
+        </div>
+
+        <div class="project-logo">
+          <img
+            src="../images/cravings/cravingslogo.png"
+            alt="Cravings App Logo"
+          />
+          <p>Spark Joy With Cravings</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Content -->
+    <main class="bg-white">
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/our-goals.png"
+            alt="Our Goals - Simple ordering process, restaurant options, easy navigation, secure payments"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/branding.png"
+            alt="Branding - Typography, color palette, and design principles"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/uikit.png"
+            alt="UI Kit - Design system and components"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/functionality.png"
+            alt="Functionality - App features and user flows"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/wireframe.png"
+            alt="Wireframes - Initial design concepts"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <h2
+            style="
+              text-align: center;
+              color: #b40000;
+              font-size: 2.5rem;
+              margin-bottom: 3rem;
+            "
+          >
+            More on what was done
+          </h2>
+          <img src="../images/cravings/splash.png" alt="Splash Screen Design" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/authorization.png"
+            alt="Authorization Flow"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/navigation.png"
+            alt="Navigation Design"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/cravings/payment.png" alt="Payment Flow" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/cravings/checkout.png" alt="Checkout Process" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/countdown_timer.png"
+            alt="Countdown Timer Feature"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/cravings/success.png" alt="Success State" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/cravings/riders.png" alt="Rider Interface" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/cravings/scaling1.png" alt="Scaling Strategy 1" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/cravings/scaling2.png" alt="Scaling Strategy 2" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/metrics1.png"
+            alt="Metrics Dashboard 1"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/metrics2.png"
+            alt="Metrics Dashboard 2"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img
+            src="../images/cravings/metrics3.png"
+            alt="Metrics Dashboard 3"
+          />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/cravings/fullstory.png" alt="Full Story" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/cravings/footer.png" alt="Footer Design" />
+        </div>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

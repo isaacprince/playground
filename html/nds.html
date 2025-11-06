@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nigerian Design System - Prince Isaac Portfolio</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .project-hero {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .project-hero h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .project-hero p {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+        opacity: 0.95;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .detail-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 12px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .detail-item h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      .detail-item ul {
+        list-style: none;
+      }
+
+      .detail-item li {
+        margin-bottom: 0.5rem;
+        opacity: 0.95;
+        color: white;
+      }
+
+      .detail-item p {
+        color: white;
+        opacity: 0.95;
+      }
+
+      .project-section {
+        padding: 4rem 0;
+      }
+
+      .project-section img {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        display: block;
+      }
+
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .back-button:hover {
+        background: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        color: #333;
+      }
+
+      .problem-section {
+        background-color: #f8f9fa;
+        padding: 4rem 0;
+      }
+
+      .problem-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .problem-content h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #333;
+      }
+
+      .problem-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 2rem;
+      }
+
+      /* Responsive design for mobile */
+      @media (max-width: 768px) {
+        .project-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .project-hero p {
+          font-size: 1.2rem;
+        }
+
+        .project-details {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .detail-item {
+          padding: 1rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .project-hero h1 {
+          font-size: 2rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html" class="back-button">← Back to Portfolio</a>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-content">
+        <h1>Nigerian Design System</h1>
+        <p>Making the design system that works for all Nigerians</p>
+
+        <div class="project-details">
+          <div class="detail-item">
+            <h3>ROLE</h3>
+            <ul>
+              <li>Product Designer</li>
+              <li>UX Researcher</li>
+              <li>Accessibility Specialist</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <h3>DURATION</h3>
+            <p>3 months</p>
+          </div>
+          <div class="detail-item">
+            <h3>INDUSTRY</h3>
+            <ul>
+              <li>Government</li>
+              <li>Design System</li>
+              <li>Open Source</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <h3>YEAR</h3>
+            <p>2022</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Content -->
+    <main class="bg-white">
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/nds/banner.png" alt="NDS Banner" />
+        </div>
+      </section>
+
+      <!-- Making the Design System -->
+      <section class="problem-section">
+        <div class="problem-content">
+          <h2 class="section-title">Making the design system that works.</h2>
+          <p>
+            A design system is a set of standards, guidelines, and tools that
+            help teams design and build digital products more efficiently and
+            consistently. It serves as a single source of truth for the visual
+            and interactive elements of a product, including typography, color,
+            layout, and functionality.
+          </p>
+          <p>
+            One of the main benefits of a design system is that it promotes
+            consistency across a product or brand. By establishing a set of
+            rules for design and development, a design system helps ensure that
+            all parts of a product feel connected and cohesive, rather than
+            Making sure the button group is consistent with the rest of the
+            design system Make sure the button group is consistent with the rest
+            of the design system, like a collection of unrelated features. This
+            can be especially important for large organizations that have
+            multiple teams working on different parts of the product.
+          </p>
+          <p>
+            A design system can also help teams work more efficiently by
+            providing a set of pre-designed and tested components that can be
+            quickly and easily incorporated into new designs. This can save time
+            and reduce the need for teams to start from scratch every time they
+            work on a new feature or redesign an existing one.
+          </p>
+        </div>
+      </section>
+
+      <!-- Problem Section -->
+      <section class="problem-section">
+        <div class="problem-content">
+          <h2>Problem</h2>
+          <p>
+            The federal government of Nigeria operates numerous websites and
+            digital applications, each with its own design language and user
+            experience. This lack of consistency can be confusing and
+            frustrating for citizens trying to access government services
+            online.
+          </p>
+          <p>
+            Furthermore, the lack of a centralized design system results in
+            inefficient resource utilization because designers must recreate
+            common UI elements and patterns for each new project.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/nds/problem.png" alt="Problem Analysis" />
+        </div>
+      </section>
+
+      <!-- Solution Section -->
+      <section class="project-section">
+        <div class="container">
+          <h2 class="section-title">Solution</h2>
+          <p
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 3rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            To address this problem, we propose the development of a design
+            system that will provide a shared set of visual design principles
+            and styles, as well as a library of reusable UI components and
+            patterns, for use across all federal government digital products.
+            This will improve the user experience for citizens as well as
+            increase efficiency in the design and development process for
+            government teams.
+          </p>
+          <p
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 3rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            The team consisted of a product manager, brand designers, product
+            designers, UX and content writers, and illustrators.
+          </p>
+        </div>
+      </section>
+
+      <!-- Research & Process -->
+      <section class="project-section">
+        <div class="container">
+          <h2 class="section-title">Research & Process</h2>
+          <p
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 1rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            We conducted user research to understand the common pain points and
+            needs across our products. We also surveyed the design teams to
+            gather their input and perspectives.
+          </p>
+
+          <p
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 1rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            Through this research, we identified the following goals for our
+            design system:
+          </p>
+
+          <ul
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 3rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+              padding-left: 2rem;
+            "
+          >
+            <li>Promote consistency in the user experience</li>
+            <li>
+              Reduce design and development time by providing reusable
+              components
+            </li>
+            <li>
+              Enable teams to iterate on designs while maintaining brand
+              consistency quickly
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <h2 class="section-title">Definition</h2>
+          <p
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 3rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+          Based on our research, we defined the scope of our design system as follows:
+          </p>
+          <ul
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 3rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+              padding-left: 2rem;
+            "
+          >
+            <li>A shared set of visual design principles and styles</li>
+            <li>
+              A library of reusable UI components and patterns
+            </li>
+            <li>
+              A design process and documentation to guide teams in using the design system.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <h2 class="section-title">Design Components</h2>
+          <p
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 3rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            We began by creating and defining the foundation for the overall
+            look and feel of our design system, which includes colors,
+            typography, grid and space, and icons.
+          </p>
+          <img src="../images/nds/design1.png" alt="Design Components 1" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/nds/design2.png" alt="Design Components 2" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="container">
+          <img src="../images/nds/design16.png" alt="Design Components 3" />
+        </div>
+      </section>
+
+       <!-- Next Steps -->
+       <section class="project-section">
+        <div class="container">
+          <p
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 3rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+          Ensuring that the teams could easily find and use the design system resources. This included guidelines for using the components as well as a process for submitting new components or requests for changes to the design system
+          </p>
+          <p
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 3rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+          <h2 class="section-title">Next Steps</h2>
+          <p>
+
+
+          <p
+            style="
+              text-align: left;
+              font-size: 1.2rem;
+              color: #666;
+              margin-bottom: 3rem;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+          
+          The <a href="https://naijadesignsystem.webflow.io/">website</a>  is up and running, and open to contributors, who are willing to contribute, maintain, and scale the design system.
+          <br>
+          <br>
+          Grateful appreciation is extended to the core contributors, as it is noted that not all individuals who exhibit heroic qualities are symbolically represented by the wearing of capes. 💯🥂
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

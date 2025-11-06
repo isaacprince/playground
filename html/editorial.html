@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editorial Design</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .project-hero {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .project-hero h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .project-hero p {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+        opacity: 0.95;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .detail-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 12px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .detail-item h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      .detail-item ul {
+        list-style: none;
+      }
+
+      .detail-item li {
+        margin-bottom: 0.5rem;
+        opacity: 0.95;
+        color: white;
+      }
+
+      .detail-item p {
+        color: white;
+        opacity: 0.95;
+      }
+
+      .project-section {
+        padding: 4rem 0;
+      }
+
+      .project-section img {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        display: block;
+      }
+
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .back-button:hover {
+        background: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        color: #333;
+      }
+
+      .problem-section {
+        background-color: #f8f9fa;
+        padding: 4rem 0;
+      }
+
+      .problem-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .problem-content h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #333;
+      }
+
+      .problem-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 2rem;
+      }
+
+      /* Responsive design for mobile */
+      @media (max-width: 768px) {
+        .project-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .project-hero p {
+          font-size: 1.2rem;
+        }
+
+        .project-details {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .detail-item {
+          padding: 1rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .project-hero h1 {
+          font-size: 2rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html" class="back-button">← Back to Portfolio</a>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-content">
+        <h1>Editorial Design Publications</h1>
+        <p></p>
+
+        <div class="project-details">
+          <div class="detail-item">
+            <h3>ROLE</h3>
+            <ul>
+              <li>Graphic / Visual Designer</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <h3>DURATION</h3>
+            <p>4 months</p>
+          </div>
+          <div class="detail-item">
+            <h3>INDUSTRY</h3>
+            <ul>
+              <li>Entertainment</li>
+              <li>Lifestyle</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <h3>YEAR</h3>
+            <p>2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Content -->
+    <main class="bg-white">
+
+      <!-- Lovely Grub -->
+      <section class="problem-section">
+        <div class="problem-content">
+          <h2 class="section-title">Lovely grub</h2>
+          <p>
+            Lovely Grub is an eye-opening editorial publication that explores the growing trend of entomophagy — the practice of eating insects and worms. From roasted crickets to mealworm burgers, Lovely Grub dives into the cultural, environmental, and nutritional aspects of bug-based diets. Through interviews, recipes, and global stories, it challenges conventional ideas of food and highlights how these protein-rich alternatives could play a vital role in the future of sustainable eating.
+          </p>
+          <section class="project-section">
+            <div class="container">
+              <img src="../images/Editorial /lovely_grub.png" alt="book cover of lovely grub" />
+            </div>
+            <br>
+            <br>
+            <iframe src="https://drive.google.com/file/d/1lyk73Qy-RPI0MtwkgZHBJ7i-Q2FVATvH/preview" 
+            style="width:100%; height:600px;" frameborder="0" allowfullscreen></iframe>
+          </section>
+        </div>
+      </section>
+
+      <!-- heirloom Catalogue -->
+      <section class="problem-section">
+        <div class="problem-content">
+          <h2 class="section-title"> The Seed Block - Herloom Catalogue</h2>
+          <p>
+            Heirloom Seeds is a seasonal editorial publication dedicated to celebrating the rich history, diversity, and resilience of seeds. More than just a gardening magazine, Heirloom Seeds is a storytelling platform rooted in ecology, culture, sustainability, and heritage.
+
+            Each issue dives into the world of heirloom and indigenous seed varieties, offering insight into their origins, cultivation practices, preservation efforts, and the communities that protect them. From rare vegetables with centuries-old lineage to traditional seed-saving techniques passed down through generations, Heirloom Seeds preserves the legacy of plants and people alike
+          </p>
+          <section class="project-section">
+            <div class="container">
+              <img src="../images/Editorial /Heirloom Catalogue.png" alt="book cover of heirloom catalogue" />
+            </div>
+            <br>
+            <br>
+            <iframe src="https://drive.google.com/file/d/1k43gW8wgetM9bAc7azfmXfI3ROvBWMDf/preview" 
+            style="width:100%; height:600px;" frameborder="0" allowfullscreen></iframe>
+          </section>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
