@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
@@ -25,6 +25,16 @@ const fadeUp = {
 
 const HomePage: React.FC = () => {
   const location = useLocation();
+  const experienceScrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollExperience = useCallback((direction: 1 | -1) => {
+    const el = experienceScrollRef.current;
+    if (!el) return;
+    const firstCard = el.querySelector<HTMLElement>('.experience-card');
+    const gap = 20;
+    const step = (firstCard?.offsetWidth ?? 400) + gap;
+    el.scrollBy({ left: direction * step, behavior: 'smooth' });
+  }, []);
 
   useEffect(() => {
     document.title = 'Prince C. Isaac — UI/UX Engineer & Designer | Toronto & London';
@@ -147,40 +157,71 @@ const HomePage: React.FC = () => {
             Product and UI work in remote and in-person teams — launches, dashboards, and design systems, with a
             growing focus on implementation and engineering partnership.
           </p>
-          <div className="experience-timeline">
-            {experience.map((job, index) => (
-              <motion.article
-                key={`${job.company}-${job.period}`}
-                className="experience-card"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ delay: index * 0.06, duration: 0.45 }}
-              >
-                <div className="experience-card__header">
-                  <div className="experience-card__role">{job.role}</div>
-                  <div className="experience-card__company">{job.company}</div>
-                  <div className="experience-card__meta">
-                    {job.period} · {job.location}
+          <div className="experience-rail">
+            <div className="experience-rail__toolbar">
+              <p className="experience-rail__hint">Drag or swipe the cards — or use the arrows.</p>
+              <div className="experience-rail__arrows">
+                <button
+                  type="button"
+                  className="experience-rail__btn"
+                  aria-label="Scroll experience left"
+                  onClick={() => scrollExperience(-1)}
+                >
+                  ←
+                </button>
+                <button
+                  type="button"
+                  className="experience-rail__btn"
+                  aria-label="Scroll experience right"
+                  onClick={() => scrollExperience(1)}
+                >
+                  →
+                </button>
+              </div>
+            </div>
+            <div
+              ref={experienceScrollRef}
+              className="experience-scroll"
+              tabIndex={0}
+              role="region"
+              aria-label="Work experience timeline"
+            >
+              {experience.map((job, index) => (
+                <motion.article
+                  key={`${job.company}-${job.period}`}
+                  className="experience-card"
+                  initial={{ opacity: 0, x: 28 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: '-20px' }}
+                  transition={{ delay: index * 0.05, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <div className="experience-card__header">
+                    <div className="experience-card__role">{job.role}</div>
+                    <div className="experience-card__company">{job.company}</div>
+                    <div className="experience-card__meta">
+                      {job.period} · {job.location}
+                    </div>
                   </div>
-                </div>
-                <ul>
-                  {job.bullets.map((b, bi) => (
-                    <li key={bi}>{b}</li>
-                  ))}
-                </ul>
-                <div className="experience-card__tools">
-                  <div className="experience-card__tools-label">Tools</div>
-                  <div>
-                    {job.tools.map((t) => (
-                      <span key={t} className="tag-pill">
-                        {t}
-                      </span>
-                    ))}
+                  <div className="experience-card__body">
+                    <ul>
+                      {job.bullets.map((b, bi) => (
+                        <li key={bi}>{b}</li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-              </motion.article>
-            ))}
+                  <div className="experience-card__tools">
+                    <div className="experience-card__tools-label">Tools</div>
+                    <div>
+                      {job.tools.map((t) => (
+                        <span key={t} className="tag-pill">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
