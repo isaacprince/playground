@@ -51,7 +51,7 @@ const EditorialCaseStudy: React.FC = () => {
             <h2 className="section-title">Lovely grub</h2>
             <p>
               Lovely Grub is an eye-opening editorial publication that explores the growing trend of
-              entomophagy — the practice of eating insects and worms. From roasted crickets to mealworm
+              entomophagy (the practice of eating insects and worms). From roasted crickets to mealworm
               burgers, Lovely Grub dives into the cultural, environmental, and nutritional aspects of bug-based
               diets. Through interviews, recipes, and global stories, it challenges conventional ideas of food and
               highlights how these protein-rich alternatives could play a vital role in the future of

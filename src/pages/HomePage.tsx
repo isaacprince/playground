@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
-import { projectCards } from '../data/projects';
 import {
   professionalSummary,
   impactHighlights,
@@ -12,7 +11,27 @@ import {
   community,
   coreSkillChips,
 } from '../data/cv';
+import { projectCards } from '../data/projects';
+import type { ProjectCard, ProjectKind } from '../data/projects';
 import { publicUrl } from '../utils/publicUrl';
+
+const portfolioFrontendProjects = projectCards.filter((p) => p.kind === 'frontend');
+const portfolioDesignProjects = projectCards.filter((p) => p.kind === 'design');
+
+const PORTFOLIO_TRACKS: { key: ProjectKind; label: string; hint: string; items: ProjectCard[] }[] = [
+  {
+    key: 'frontend',
+    label: 'Live products',
+    hint: 'Consulting builds: React/TypeScript and design systems shipping in production.',
+    items: portfolioFrontendProjects,
+  },
+  {
+    key: 'design',
+    label: 'Design',
+    hint: 'UI/UX, systems, brand, and editorial work with case studies on this site.',
+    items: portfolioDesignProjects,
+  },
+];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -37,7 +56,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    document.title = 'Prince C. Isaac — UI/UX Engineer & Designer | Toronto & London';
+    document.title = 'Prince C. Isaac | Product Engineer & Designer | Toronto & London';
   }, []);
 
   useEffect(() => {
@@ -68,7 +87,7 @@ const HomePage: React.FC = () => {
             </motion.h1>
             <motion.div className="hero-rule" variants={fadeUp} custom={1} aria-hidden />
             <motion.h2 variants={fadeUp} custom={2}>
-              UI/UX Engineer &amp; Designer · Toronto, ON &amp; London, UK
+              Product engineer &amp; designer · Toronto, ON &amp; London, UK
             </motion.h2>
             <motion.p variants={fadeUp} custom={3}>
               {professionalSummary.shortLine}
@@ -109,8 +128,8 @@ const HomePage: React.FC = () => {
         <div className="container">
           <h2 className="section-title">Professional summary</h2>
           <p className="section-subtitle">
-            I combine UX craft with frontend execution — systems and flows in Figma, shipped UI in modern web stacks.
-            Especially interested in fintech, Web3, and AI-assisted product surfaces.
+            From product design foundations to consulting as a product engineer: React/TypeScript, design systems,
+            experiments, and observability, with a bias for shippable UI and measurable outcomes.
           </p>
 
           <div className="highlights-grid">
@@ -152,14 +171,15 @@ const HomePage: React.FC = () => {
 
       <section id="experience" className="experience-section">
         <div className="container">
+          <p className="experience-section__eyebrow">Product engineering &amp; design</p>
           <h2 className="section-title">Experience</h2>
           <p className="section-subtitle">
-            Product and UI work in remote and in-person teams — launches, dashboards, and design systems, with a
-            growing focus on implementation and engineering partnership.
+            Recent roles with Alexandra &amp; Ike Consultancy (Combyn, Puffer Finance) plus product design at Koneqtor
+            and Cravings, with systems, performance, and full UI ownership.
           </p>
           <div className="experience-rail">
             <div className="experience-rail__toolbar">
-              <p className="experience-rail__hint">Drag or swipe the cards — or use the arrows.</p>
+              <p className="experience-rail__hint">Scroll the timeline (drag, swipe, or use the arrows).</p>
               <div className="experience-rail__arrows">
                 <button
                   type="button"
@@ -184,7 +204,7 @@ const HomePage: React.FC = () => {
               className="experience-scroll"
               tabIndex={0}
               role="region"
-              aria-label="Work experience timeline"
+              aria-label="Work experience: product engineering and design roles"
             >
               {experience.map((job, index) => (
                 <motion.article
@@ -195,28 +215,42 @@ const HomePage: React.FC = () => {
                   viewport={{ once: true, margin: '-20px' }}
                   transition={{ delay: index * 0.05, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <div className="experience-card__header">
-                    <div className="experience-card__role">{job.role}</div>
-                    <div className="experience-card__company">{job.company}</div>
-                    <div className="experience-card__meta">
-                      {job.period} · {job.location}
-                    </div>
-                  </div>
-                  <div className="experience-card__body">
-                    <ul>
-                      {job.bullets.map((b, bi) => (
-                        <li key={bi}>{b}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="experience-card__tools">
-                    <div className="experience-card__tools-label">Tools</div>
-                    <div>
-                      {job.tools.map((t) => (
-                        <span key={t} className="tag-pill">
-                          {t}
-                        </span>
-                      ))}
+                  <div className="experience-card__shell">
+                    <span className="experience-card__index" aria-hidden>
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <div className="experience-card__main">
+                      <div className="experience-card__header">
+                        <div className="experience-card__role">{job.role}</div>
+                        {job.focusTags && job.focusTags.length > 0 ? (
+                          <ul className="experience-card__focus" aria-label="Focus areas">
+                            {job.focusTags.map((tag) => (
+                              <li key={tag}>{tag}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+                        <div className="experience-card__company">{job.company}</div>
+                        <div className="experience-card__meta">
+                          {job.period} · {job.location}
+                        </div>
+                      </div>
+                      <div className="experience-card__body">
+                        <ul>
+                          {job.bullets.map((b, bi) => (
+                            <li key={bi}>{b}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="experience-card__tools">
+                        <div className="experience-card__tools-label">Design &amp; dev stack</div>
+                        <div className="experience-card__tool-pills">
+                          {job.tools.map((t) => (
+                            <span key={t} className="tag-pill">
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </motion.article>
@@ -230,8 +264,8 @@ const HomePage: React.FC = () => {
         <div className="container">
           <h2 className="section-title">Expertise &amp; education</h2>
           <p className="section-subtitle">
-            Formal training in print, web, and product — plus the design and frontend toolkit I use to go from
-            research to build.
+            Formal training in web, print, and graphic design, plus the product engineering stack I use on client work
+            today.
           </p>
 
           <div className="credentials-layout">
@@ -294,43 +328,71 @@ const HomePage: React.FC = () => {
         <div className="container">
           <h2 className="section-title">Selected projects</h2>
           <p className="section-subtitle">
-            Case studies spanning product UX, research, branding, and systems — the same problems I like to solve in
-            code when I&apos;m on the engineering side of the house.
+            Engineering work you can open in the browser, then design projects with deeper case studies.
           </p>
         </div>
-        <div className="portfolio-grid">
-          {projectCards.map((project, index) => (
-            <motion.article
-              key={project.slug}
-              className="project-card"
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ delay: index * 0.08, duration: 0.5 }}
-              whileHover={{ y: -6 }}
-            >
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-              </div>
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p className="project-role">{project.role}</p>
-                <p>{project.description}</p>
-                <div className="project-stats">
-                  {project.stats.map((s) => (
-                    <div key={s.label} className="stat">
-                      <span className="stat-number">{s.number}</span>
-                      <span className="stat-label">{s.label}</span>
-                    </div>
-                  ))}
+
+        <div className="portfolio-clusters">
+          {PORTFOLIO_TRACKS.map((track) => (
+            <div key={track.key} className={`portfolio-cluster portfolio-cluster--${track.key}`}>
+              <div className="portfolio-cluster__shell">
+                <header className="portfolio-cluster__header">
+                  <div className="portfolio-cluster__title-row">
+                    <span className="portfolio-cluster__marker" aria-hidden />
+                    <h3 className="portfolio-cluster__title">{track.label}</h3>
+                  </div>
+                  <p className="portfolio-cluster__hint">{track.hint}</p>
+                </header>
+                <div className="portfolio-cluster__scroll">
+                  <div className="portfolio-grid">
+                    {track.items.map((project, index) => (
+                      <motion.article
+                        key={project.slug}
+                        className={`project-card project-card--${project.kind}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: '-50px' }}
+                        transition={{ delay: index * 0.06, duration: 0.45 }}
+                        whileHover={{ y: -4 }}
+                      >
+                        <div className="project-image">
+                          <img src={project.image} alt={project.title} />
+                        </div>
+                        <div className="project-content">
+                          <h3>{project.title}</h3>
+                          <p className="project-role">{project.role}</p>
+                          <p className="project-desc">{project.description}</p>
+                          <div className="project-stats">
+                            {project.stats.map((s) => (
+                              <div key={s.label} className="stat">
+                                <span className="stat-number">{s.number}</span>
+                                <span className="stat-label">{s.label}</span>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="project-actions">
+                            {project.externalUrl ? (
+                              <a
+                                href={project.externalUrl}
+                                className="btn btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {project.ctaLabel ?? 'Visit live site'}
+                              </a>
+                            ) : (
+                              <Link to={`/case-studies/${project.slug}`} className="btn btn-primary">
+                                {project.ctaLabel ?? 'View case study'}
+                              </Link>
+                            )}
+                          </div>
+                        </div>
+                      </motion.article>
+                    ))}
+                  </div>
                 </div>
-                <div className="project-actions">
-                  <Link to={`/case-studies/${project.slug}`} className="btn btn-primary">
-                    View case study
-                  </Link>
-                </div>
               </div>
-            </motion.article>
+            </div>
           ))}
         </div>
       </section>
@@ -342,13 +404,13 @@ const HomePage: React.FC = () => {
             <div className="contact-info">
               <h3>Let&apos;s work together</h3>
               <p>
-                Open to UI/UX engineering, frontend, and product design roles — plus contract work in fintech, Web3,
-                and design systems. If you need someone who can both design the experience and help ship the UI, say
-                hello. I&apos;ll follow up with my full CV or portfolio PDF on request.
+                Open to product engineering, frontend, and design-forward technical roles, plus consulting in fintech and
+                design systems. If you need someone who can own UI in Figma and in React, say hello.
+                I&apos;ll follow up with my full CV or portfolio PDF on request.
               </p>
               <p style={{ marginTop: '1rem' }}>
                 <a
-                  href="mailto:isaacprince001@gmail.com?subject=CV%20request%20%E2%80%94%20Prince%20Isaac"
+                  href="mailto:isaacprince001@gmail.com?subject=CV%20request%20-%20Prince%20Isaac"
                   className="btn btn-primary"
                   style={{ marginRight: '0.75rem' }}
                 >

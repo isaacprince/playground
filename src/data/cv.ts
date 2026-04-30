@@ -1,18 +1,18 @@
-/** CV content — keep in sync with resume PDF */
+/** CV content; keep in sync with resume PDF */
 
 export const professionalSummary = {
   shortLine:
-    'UI/UX engineer and designer with 5+ years shipping interfaces, from research and systems in Figma to production-minded HTML, CSS, and React. Comfortable owning the span from UX flows to accessible, component-ready UI.',
+    'Product engineer and designer, shipping React/TypeScript product UIs, design systems (Chakra UI, Radix, Emotion), and measurable growth; grounded in years of UI/UX craft in Figma.',
   paragraphs: [
-    'I bridge product design and frontend delivery: structured components, tokens, and prototypes in Figma; semantic, responsive layouts; and modern stacks (e.g. React, TypeScript, styled-components) so ideas don’t stop at the mockup. Focus areas include fintech, Web3, and AI-enhanced interfaces.',
-    'I thrive in remote, cross-functional teams, workshops and usability tests with design, paired with clear specs, motion notes, and dev handoff so engineering can ship faster with fewer loops. I’m based between Toronto, ON and London, UK.',
+    'Recent consulting work is hands-on engineering: design systems that scale, frontend observability (e.g. Datadog), A/B tests and experiments, and performance-focused web rebuilds. I still bring a designer’s lens to interaction quality, accessibility, and clear handoff.',
+    'Earlier roles were design-led product work (Koneqtor, Cravings): mobile and web UX, dashboards, and lifecycle campaigns. I work across Toronto, ON and London, UK, often remote with distributed teams.',
   ],
 };
 
 export const impactHighlights = [
-  { stat: '30%', label: 'Faster admin tasks', context: 'Koneqtor dashboard redesign' },
+  { stat: '23%', label: 'Fewer drop-offs', context: 'Puffer, initial page load' },
+  { stat: '30%', label: 'Faster admin tasks', context: 'Koneqtor dashboard' },
   { stat: '52', label: 'Active vendors', context: 'Cravings launch' },
-  { stat: '10%', label: 'Retention lift', context: 'Behavioral notifications' },
   { stat: '150%', label: 'Email CTR', context: 'Cravings campaigns' },
 ];
 
@@ -21,56 +21,71 @@ export type ExperienceItem = {
   location: string;
   role: string;
   period: string;
+  focusTags?: string[];
   bullets: string[];
   tools: string[];
 };
 
 export const experience: ExperienceItem[] = [
   {
-    company: 'Alexandra & Ike Consultancy LTD',
-    location: 'London, UK (remote)',
-    role: 'Product Designer',
-    period: 'Sep 2024 – Present',
+    company: 'Combyn',
+    location: 'Remote',
+    role: 'Product Engineer Consultant · Alexandra & Ike Consultancy LTD',
+    period: 'Sep 2025 - Present',
+    focusTags: ['Design systems', 'Observability', 'Experimentation'],
     bullets: [
-      'Design and refine digital experiences within an established visual system in a multidisciplinary, remote-first team.',
-      'Support brand and interface consistency across web tools, presentations, and internal documentation.',
-      'Facilitate stakeholder workshops to translate complex requirements into clear layouts and flows.',
-      'Maintain organized Figma files, reusable components, and labeled assets for smooth collaboration — with an eye toward dev-ready structure, variants, and accessibility.',
+      'Built a design system for current and future products using Chakra UI, Radix, and Emotion.',
+      'Integrated frontend event tracking and analytics into Datadog for stronger product observability.',
+      'Ran experiments to improve engagement and conversion (A/B tests on pages and small apps).',
+      'Collaborated on the redevelopment of Combyn’s web application, improving initial page load performance.',
     ],
     tools: [
+      'React',
+      'TypeScript',
+      'Webpack',
+      'TanStack Query',
+      'React Testing Library',
+      'Emotion',
+      'Chakra UI',
+      'Radix UI',
+      'Stencil',
       'Figma',
-      'Miro',
       'Adobe CC',
-      'Photoshop',
-      'Illustrator',
-      'InDesign',
-      'After Effects',
-      'Sketch',
     ],
   },
   {
-    company: 'Humber Employability Skills Hub (ESH)',
-    location: 'Toronto, ON',
-    role: 'Product Designer',
-    period: 'Feb 2024 – Sep 2024',
+    company: 'Puffer Finance',
+    location: 'London, UK',
+    role: 'Product Engineer Consultant · Alexandra & Ike Consultancy LTD',
+    period: 'Feb 2025 - Sep 2025',
+    focusTags: ['React & TypeScript', 'Fintech', 'Design systems'],
     bullets: [
-      'One of 24 students in Humber’s ESH Student Design Workshop; collaborated in multidisciplinary teams.',
-      'Co-designed a centralized skills and activities hub, piloted with Early Childhood Education — 40+ key functions.',
-      'Ran stakeholder and persona workshops; led feature design and usability improvements over a five-week sprint.',
-      'Presented findings and rollout recommendations to Humber’s oversight committee.',
+      'Collaborated on the revamped Puffer web application: faster load times and ~23% reduction in drop-offs on initial page load.',
+      'Contributed to money transfer, insurance marketplace, and loan disbursement modules.',
+      'Helped coordinate CLI tooling and a shared design system for the web engineering team.',
     ],
-    tools: ['Figma', 'Miro', 'Adobe CC', 'Sketch'],
+    tools: [
+      'React',
+      'TypeScript',
+      'Webpack',
+      'TanStack Query',
+      'React Testing Library',
+      'Emotion',
+      'Stencil',
+      'Figma',
+      'Adobe CC',
+    ],
   },
   {
     company: 'Koneqtor',
     location: 'Lagos',
     role: 'Product Designer',
-    period: 'Jan 2023 – Nov 2023',
+    period: 'Jan 2023 - Nov 2024',
+    focusTags: ['UI/UX', 'Mobile & web', 'Dashboard'],
     bullets: [
-      'Led UI/UX for mobile and web; supported a successful site and app preview in Q2 testing.',
-      'Designed a streamlined admin dashboard — ~30% faster task completion, ~25% efficiency gain, fewer errors, ~20% higher internal satisfaction.',
-      'Usability testing and iterative fixes — ~20% reduction in user errors.',
-      'A/B tests on landing pages — ~20% improvement in visit-to-booking conversion.',
+      'Led UI/UX for Koneqtor’s mobile and web applications and orchestrated a successful site and app preview in Q2.',
+      'Designed a streamlined admin dashboard: ~30% faster task completion for administrators, ~25% efficiency gain, fewer errors, and ~20% higher satisfaction among internal teams.',
+      'Usability testing and iterative design: ~20% reduction in user errors and smoother overall experience.',
     ],
     tools: [
       'Figma',
@@ -79,22 +94,24 @@ export const experience: ExperienceItem[] = [
       'Sketch',
       'Webflow',
       'Framer',
+      'Midjourney',
+      'Figma AI',
       'Notion',
-      'Trello',
     ],
   },
   {
     company: 'Cravings',
     location: 'Lagos',
     role: 'Product Designer',
-    period: 'Sep 2021 – Dec 2022',
+    period: 'Sep 2021 - Dec 2022',
+    focusTags: ['Multi-platform', 'Growth', 'Prototyping'],
     bullets: [
-      'Shipped Cravings web app plus vendor and customer mobile apps; 52 active vendors onboarded.',
-      'Behavioral push notifications from usage data — ~10% retention lift.',
-      'Email templates for newsletters and campaigns — ~150% higher click-through.',
-      'Figma prototypes for mobile and web — faster iteration (~60% less rework) and stronger design quality (~40%).',
+      'Designed and launched the Cravings web app and vendor & customer mobile apps, with 52 active vendors onboarded.',
+      'Behavioral push notifications from in-app usage drove ~10% retention lift.',
+      'Email templates for newsletters and marketing drove ~150% higher click-through rate.',
+      'Figma prototypes for mobile and web cut ~60% of time on design iterations and strengthened design quality by ~40%.',
     ],
-    tools: ['Figma', 'Jira', 'Illustrator', 'Google Workspace'],
+    tools: ['Figma', 'Jira', 'Illustrator', 'Google Sheets', 'Google Meet'],
   },
 ];
 
@@ -129,48 +146,56 @@ export type ToolCategory = {
 
 export const toolCategories: ToolCategory[] = [
   {
-    title: 'Design & UX',
+    title: 'Product engineering',
     items: [
-      'UI/UX & product design',
-      'Design systems & tokens',
-      'Prototyping & motion',
-      'Usability testing',
-      'A/B testing',
-      'Workshops & facilitation',
+      'React & TypeScript',
+      'Webpack',
+      'TanStack Query (React Query)',
+      'React Testing Library',
+      'Emotion',
+      'Stencil',
+      'Chakra UI',
+      'Radix UI',
+      'Datadog (frontend tracking)',
+      'Performance & Core Web Vitals',
     ],
   },
   {
-    title: 'Frontend & delivery',
+    title: 'Design & UX',
     items: [
-      'React',
-      'TypeScript',
-      'HTML & semantic markup',
-      'CSS & responsive layout',
-      'styled-components',
-      'Git',
-      'Design-to-code handoff',
+      'UI & interaction design',
+      'Design systems & tokens',
+      'Prototyping in Figma',
+      'Usability testing',
+      'A/B testing & experiments',
+      'Workshops & facilitation',
     ],
   },
   {
     title: 'Tools',
     items: [
-      'Figma',
+      'Figma & Figma AI',
       'Sketch',
       'Miro',
       'Webflow',
-      'Framer',
+      'Framer (design)',
       'Adobe Photoshop',
       'Illustrator',
       'InDesign',
       'After Effects',
       'Jira',
       'Notion',
-      'Generative AI',
+      'Midjourney',
     ],
   },
   {
     title: 'Foundations',
-    items: ['Accessibility (WCAG-minded)', 'Performance-aware UI', 'Brand & print'],
+    items: [
+      'Accessibility (WCAG-minded)',
+      'Component-driven workflows',
+      'Git & collaboration',
+      'Brand & visual design',
+    ],
   },
 ];
 
@@ -188,7 +213,7 @@ export const community: CommunityItem[] = [
     year: '2023',
     role: 'Product Design Lead',
     description:
-      'Mentored junior designers through the full product cycle — research, ideation, and handoff — through test release in Q3 planning.',
+      'Mentored junior designers on UX, UI craft, and dev-ready handoff from research through test release in Q3 planning.',
     href: 'https://paperfoxx.bubbleapps.io/version-test',
   },
   {
@@ -196,7 +221,7 @@ export const community: CommunityItem[] = [
     year: '2023',
     role: 'Core contributor',
     description:
-      'Open-source DAO work with dev, growth, and ops. Shaped POAP concepts and a foundational design system — tone, voice, and MVP cohesion.',
+      'Open-source DAO work with dev, growth, and ops. Shaped POAP concepts and a foundational design system (tone, voice, and MVP UI cohesion).',
     href: 'https://www.metaworks.xyz/',
   },
   {
@@ -204,7 +229,7 @@ export const community: CommunityItem[] = [
     year: '2022',
     role: 'Contributor',
     description:
-      'Cross-functional collaboration on standards and assets for Nigerian government digital products — aligned with your NDS case study.',
+      'Cross-functional collaboration on standards and UI assets for Nigerian government digital products. See NDS case study.',
     href: 'https://naijadesignsystem.webflow.io/',
   },
   {
@@ -212,17 +237,17 @@ export const community: CommunityItem[] = [
     year: '2022',
     role: 'Accessibility & research',
     description:
-      'User research to improve accessibility for visually impaired users; contrast tooling and inclusive patterns in the system.',
+      'Research to improve accessibility for visually impaired users; contrast tooling and inclusive UI patterns in the system.',
   },
 ];
 
 export const coreSkillChips = [
-  'UI/UX engineering',
-  'Design systems',
+  'Product engineering',
   'React & TypeScript',
-  'UX research',
-  'Prototyping',
+  'Design systems',
+  'Chakra UI & Radix',
+  'UI/UX design',
+  'Experimentation',
   'Figma',
-  'Accessible UI',
-  'Design-to-code',
+  'Observability',
 ];

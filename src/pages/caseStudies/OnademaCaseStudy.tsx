@@ -129,7 +129,7 @@ const OnademaCaseStudy: React.FC = () => {
           <div className="container">
             <h2 className="section-title">Media Kit</h2>
             <p className="cs-prose">
-              Bold. Unapologetic. Unforgettable. Ona Dema is a rising force in the music scene—blending
+              Bold. Unapologetic. Unforgettable. Ona Dema is a rising force in the music scene, blending
               Afro-fusion rhythms with raw storytelling and genre-bending soundscapes. This media kit offers a
               complete snapshot of her brand, music, and movement under Basement Records. Inside, you&apos;ll
               find high-resolution press photos, official bios, tour visuals, past features, and promotional

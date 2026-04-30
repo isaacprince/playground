@@ -1,4 +1,4 @@
-/** Blue palette — matches site CSS / hero portrait */
+/** Blue palette; matches site CSS / hero portrait */
 export const tokens = {
   bg: '#eef4fc',
   bgAlt: '#e2ebf6',

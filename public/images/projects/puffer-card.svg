@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="240" viewBox="0 0 800 240" role="img" aria-label="Puffer Finance">
+  <defs>
+    <linearGradient id="pbg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="50%" stop-color="#075985"/>
+      <stop offset="100%" stop-color="#164e63"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="240" fill="url(#pbg)"/>
+  <g opacity="0.15" stroke="#38bdf8" stroke-width="1" fill="none">
+    <path d="M0 180 Q200 120 400 160 T800 140"/>
+    <path d="M0 200 Q300 80 500 130 T800 100"/>
+  </g>
+  <text x="400" y="118" text-anchor="middle" fill="#e0f2fe" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="700" letter-spacing="-0.02em">Puffer Finance</text>
+  <text x="400" y="158" text-anchor="middle" fill="#7dd3fc" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="500" letter-spacing="0.1em">ETHEREUM / LIQUID RESTAKING / WEB</text>
+</svg>

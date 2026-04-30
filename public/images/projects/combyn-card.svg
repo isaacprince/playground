@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="240" viewBox="0 0 800 240" role="img" aria-label="Combyn">
+  <defs>
+    <linearGradient id="cbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="55%" stop-color="#115e59"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="240" fill="url(#cbg)"/>
+  <g opacity="0.12" fill="#ffffff">
+    <circle cx="120" cy="60" r="90"/>
+    <circle cx="720" cy="180" r="120"/>
+  </g>
+  <text x="400" y="128" text-anchor="middle" fill="#ecfdf5" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="42" font-weight="700" letter-spacing="-0.02em">Combyn</text>
+  <text x="400" y="168" text-anchor="middle" fill="#99f6e4" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="500" letter-spacing="0.12em">EXPENSE MANAGEMENT / WEB</text>
+</svg>
