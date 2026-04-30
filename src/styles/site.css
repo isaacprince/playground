@@ -1169,6 +1169,53 @@ body {
     box-sizing: border-box;
 }
 
+/* Few live-product cards: fill the row instead of a sparse horizontal strip */
+.portfolio-cluster__scroll--fit {
+    overflow-x: visible;
+    scroll-snap-type: none;
+}
+
+.portfolio-grid--balanced {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 0;
+    width: 100%;
+    align-items: stretch;
+    gap: 1.25rem;
+}
+
+.portfolio-grid--balanced:has(> :only-child) {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 28rem;
+    margin-inline: auto;
+}
+
+.portfolio-grid--balanced .project-card {
+    width: 100%;
+    max-width: none;
+    scroll-snap-align: unset;
+}
+
+.portfolio-grid--balanced .project-image {
+    height: 158px;
+    min-height: 158px;
+}
+
+.portfolio-grid--balanced .project-image img {
+    min-height: 158px;
+}
+
+@media (max-width: 640px) {
+    .portfolio-grid--balanced {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid--balanced:has(> :only-child) {
+        max-width: none;
+        margin-inline: 0;
+    }
+}
+
 .project-card {
     background-color: var(--color-surface);
     border-radius: var(--radius-md);

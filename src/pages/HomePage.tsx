@@ -129,7 +129,8 @@ const HomePage: React.FC = () => {
           <h2 className="section-title">Professional summary</h2>
           <p className="section-subtitle">
             From product design foundations to consulting as a product engineer: React/TypeScript, design systems,
-            experiments, and observability, with a bias for shippable UI and measurable outcomes.
+            experiments, and observability, plus AI-assisted and agentic workflows where they speed up delivery without
+            lowering the bar for quality.
           </p>
 
           <div className="highlights-grid">
@@ -333,7 +334,9 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="portfolio-clusters">
-          {PORTFOLIO_TRACKS.map((track) => (
+          {PORTFOLIO_TRACKS.map((track) => {
+            const useBalancedGrid = track.items.length <= 2;
+            return (
             <div key={track.key} className={`portfolio-cluster portfolio-cluster--${track.key}`}>
               <div className="portfolio-cluster__shell">
                 <header className="portfolio-cluster__header">
@@ -343,8 +346,10 @@ const HomePage: React.FC = () => {
                   </div>
                   <p className="portfolio-cluster__hint">{track.hint}</p>
                 </header>
-                <div className="portfolio-cluster__scroll">
-                  <div className="portfolio-grid">
+                <div
+                  className={`portfolio-cluster__scroll${useBalancedGrid ? ' portfolio-cluster__scroll--fit' : ''}`}
+                >
+                  <div className={`portfolio-grid${useBalancedGrid ? ' portfolio-grid--balanced' : ''}`}>
                     {track.items.map((project, index) => (
                       <motion.article
                         key={project.slug}
@@ -393,7 +398,8 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
