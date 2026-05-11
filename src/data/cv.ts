@@ -2,9 +2,9 @@
 
 export const professionalSummary = {
   shortLine:
-    'Product engineer and designer, shipping React/TypeScript product UIs, design systems (Chakra UI, Radix, Emotion), and measurable growth; grounded in years of UI/UX craft in Figma. Comfortable with AI-assisted and agentic programming as part of a disciplined delivery workflow.',
+    'Product engineer and designer, shipping React/TypeScript product UIs, design systems (Chakra UI, Radix, Emotion), and measurable growth; grounded in years of UI/UX craft in Figma. I use coding assistants as a tool for speed, then I read the diff, test, and ship maintainable UI.',
   paragraphs: [
-    'Recent consulting work is hands-on engineering: design systems that scale, frontend observability (e.g. Datadog), A/B tests and experiments, and performance-focused web rebuilds. I use modern AI coding tools and agent-style flows for speed on implementation and refactors, with the same bar for review, tests, and code I can own. I still bring a designer’s lens to interaction quality, accessibility, and clear handoff.',
+    'Recent consulting work is hands-on engineering: design systems that scale, frontend observability (e.g. Datadog), A/B tests and experiments, and performance-focused web rebuilds. I use coding assistants for drafts and refactors, then I review the changes, run tests when possible, and ship code I can own. I still bring a designer’s lens to interaction quality, accessibility, and clear handoff.',
     'Earlier roles were design-led product work (Koneqtor, Cravings): mobile and web UX, dashboards, and lifecycle campaigns. I work across Toronto, ON and London, UK, often remote with distributed teams.',
   ],
 };
@@ -172,11 +172,11 @@ export const toolCategories: ToolCategory[] = [
     ],
   },
   {
-    title: 'AI & engineering workflow',
+    title: 'How I work',
     items: [
-      'AI coding assistants (e.g. Cursor, Copilot-class tools)',
-      'Agentic and multi-step automation for features, fixes, and refactors',
-      'Human-in-the-loop review, prompting, and shipping maintainable code',
+      'Cursor and similar assistants for scaffolding and refactors',
+      'Review every change I did not type by hand',
+      'Tests and CI when the project allows it',
     ],
   },
   {
@@ -254,7 +254,6 @@ export const coreSkillChips = [
   'React & TypeScript',
   'Design systems',
   'Chakra UI & Radix',
-  'AI-assisted development',
   'UI/UX design',
   'Experimentation',
   'Figma',

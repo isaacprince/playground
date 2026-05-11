@@ -128,9 +128,8 @@ const HomePage: React.FC = () => {
         <div className="container">
           <h2 className="section-title">Professional summary</h2>
           <p className="section-subtitle">
-            From product design foundations to consulting as a product engineer: React/TypeScript, design systems,
-            experiments, and observability, plus AI-assisted and agentic workflows where they speed up delivery without
-            lowering the bar for quality.
+            Design background, engineering work now. The numbers below map to specific launches and engagements in the
+            experience section.
           </p>
 
           <div className="highlights-grid">
