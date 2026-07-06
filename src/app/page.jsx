@@ -516,7 +516,7 @@ export default function Home() {
                   <span className="block text-[0.7rem] uppercase tracking-wide">
                     Timeline
                   </span>
-                  Sep 2024 - Present
+                  Sep 2025 - Present
                 </p>
                 <p>
                   <span className="block text-[0.7rem] uppercase tracking-wide">

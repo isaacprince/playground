@@ -83,7 +83,7 @@ export default function CombynCaseStudy() {
             <p className="text-[#FF6600] text-sm uppercase tracking-wider mb-2">
               Timeline
             </p>
-            <p className="text-xl font-semibold">September 2024 - Present</p>
+            <p className="text-xl font-semibold">September 2025 - Present</p>
           </div>
         </div>
 
