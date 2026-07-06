@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+html {
+  font-size: clamp(11px, 1vw, 19.2px);
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Remove all @font-face definitions for Agrandir, Neue Machina, and Chalkduster */

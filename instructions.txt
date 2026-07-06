@@ -1,0 +1,2 @@
+- note to put all sizes in px when styling with tailind, e.g text-[14px]
+- use tailwind for all styling 
