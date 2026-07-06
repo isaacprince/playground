@@ -125,7 +125,7 @@ export default function IndaoCaseStudy() {
               Crypto Newbies face difficulties before accomplishing their first
               meaningful contributions to a DAO : Finding DAOs to join,
               Understanding what a DAO represents & how to make meaningful
-              contributions.Before we get started I'll like to explain what a
+              contributions.Before we get started I&apos;ll like to explain what a
               DAO is.
             </p>
           </div>
@@ -201,8 +201,8 @@ export default function IndaoCaseStudy() {
             </h2>
             <div className="space-y-[0.234375rem]">
               <p className="font-DM-Sans font-[400] text-[2.125rem] leading-[2.753rem]">
-                First, I didn't want to build on the assumptions of the problem
-                we had already, And at the same time, I didn't want to break
+                First, I didn&apos;t want to build on the assumptions of the problem
+                we had already, And at the same time, I didn&apos;t want to break
                 what works already too.
               </p>
               <p className="font-DM-Sans font-[400] text-[2.125rem] leading-[2.753rem]">
@@ -349,7 +349,7 @@ export default function IndaoCaseStudy() {
                 What are the opportunities from this insights?
               </p>
               <p className="font-DM-Sans font-normal text-[1.875rem] leading-[2.8125rem] tracking-[-1.9%]">
-                During the ideation sessions, I adopted the "How might we "
+                During the ideation sessions, I adopted the &quot;How might we &quot;
                 framework to help us convert our challenges to opportunities by
                 answering the reframed questions and figuring out possible
                 solutions centered around the key insights or problems from our
