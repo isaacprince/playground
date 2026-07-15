@@ -33,7 +33,7 @@ export default function Home() {
         <AnimatePresence mode="wait">
           <div className="relative pt-0 mt-10 bg-[#111111] h-full">
             {/* Mobile hero — stacked layout */}
-            <div className="md:hidden flex flex-col items-center px-4 pt-4 pb-24 gap-8" id="about">
+            <div className="lg:hidden flex flex-col items-center px-4 pt-4 pb-24 gap-8" id="about">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -47,13 +47,13 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="relative w-full max-w-[18rem]"
+                className="relative w-full max-w-[14rem] sm:max-w-[16rem]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <img src="/about.png" alt="" className="w-full" />
-                <p className="absolute top-[18%] left-[10%] right-[10%] text-[#333435] font-neueMachinaBold font-[800] text-[0.65rem] sm:text-xs leading-snug">
+                <p className="absolute top-[18%] left-[10%] right-[10%] text-[#333435] font-neueMachinaBold font-[800] text-[0.5rem] sm:text-[0.6rem] leading-snug">
                   Prince operates at the intersection of two critical domains: the
                   pursuit of enjoyment and the pragmatic resolution of business
                   challenges through design. This approach enables Prince to deliver
@@ -63,7 +63,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="flex flex-wrap justify-center items-center gap-0 w-full max-w-xs"
+                className="flex flex-wrap justify-center items-center gap-0 w-full max-w-[16rem] sm:max-w-xs"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -79,14 +79,14 @@ export default function Home() {
                     key={link.alt}
                     target="_blank"
                     href={link.href}
-                    className="w-[4.5rem] h-[4.5rem] -ml-3 first:ml-0"
+                    className="w-[3.5rem] h-[3.5rem] sm:w-[4.5rem] sm:h-[4.5rem] -ml-2 sm:-ml-3 first:ml-0"
                   >
                     <img src={link.src} alt={link.alt} className="w-full h-full" />
                   </Link>
                 ))}
               </motion.div>
 
-              <div className="grid grid-cols-2 gap-4 w-full max-w-[20rem]">
+              <div className="grid grid-cols-2 gap-3 w-full max-w-[14rem] sm:max-w-[17rem]">
                 <Link
                   href="https://docs.google.com/document/d/1V71I5XEU6sNjQYbbp_OR01lRsljHkSKBH_HKVLuB3Gk/edit?tab=t.0"
                   target="_blank"
@@ -118,7 +118,7 @@ export default function Home() {
             </div>
 
             {/* Desktop hero — collage layout */}
-            <div className="hidden md:block relative w-full h-full pb-[4rem] md:pb-[6rem]">
+            <div className="hidden lg:block relative w-full h-full pb-[4rem] md:pb-[6rem]">
               {/* About Section */}
               <motion.div
                 id="about"
@@ -442,7 +442,7 @@ export default function Home() {
       {/* selected projects */}
       <section
         id="projects"
-        className="min-h-screen flex flex-col items-center bg-[#111111] pt-[3rem] md:pt-[6.875rem] px-4 sm:px-8 md:px-[6.25rem] mt-8 md:mt-[58.375rem] lg:mt-[12.375rem]"
+        className="min-h-screen flex flex-col items-center bg-[#111111] pt-[3rem] md:pt-[6.875rem] px-4 sm:px-8 md:px-[6.25rem] mt-8 lg:mt-[12.375rem]"
       >
         <div className="flex justify-start w-full">
           <h1 className="text-[#FF6600] text-[1.75rem] sm:text-[2.5rem] font-normal mb-[2rem] md:mb-[2.4375rem] ml-0 md:ml-[5rem] font-neueMachina">
@@ -474,6 +474,7 @@ export default function Home() {
               isProject4InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
             }
             transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.02, y: -6 }}
             className="relative w-full max-w-[43.4375rem] lg:w-[43.4375rem] z-20"
           >
             <Image
@@ -493,6 +494,7 @@ export default function Home() {
               isProject4InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
             }
             transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ rotate: -1.5, scale: 1.02 }}
             className="relative w-full max-w-[23.0625rem] lg:w-[23.0625rem] z-20"
           >
             <div className="relative min-h-[23rem] bg-[#fef08a] rounded-[1.25rem] border-2 border-black p-6 text-[#323334] shadow-xl rotate-1">
@@ -575,6 +577,7 @@ export default function Home() {
               isProject1InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
             }
             transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.02, y: -6 }}
             className="relative w-full max-w-[43.4375rem] lg:w-[43.4375rem] z-20"
           >
             <Image
@@ -593,6 +596,7 @@ export default function Home() {
               isProject1InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
             }
             transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ rotate: -1.5, scale: 1.02 }}
             className="relative w-full max-w-[23.0625rem] lg:w-[23.0625rem] z-20"
           >
             <div className="relative">
@@ -653,6 +657,7 @@ export default function Home() {
               isProject2InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
             }
             transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.02, y: -6 }}
             className="relative w-full max-w-[43.4375rem] lg:w-[43.4375rem] z-20"
             >
             <Image
@@ -671,6 +676,7 @@ export default function Home() {
               isProject2InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
             }
             transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ rotate: -1.5, scale: 1.02 }}
             className="relative w-full max-w-[23.0625rem] lg:w-[23.0625rem] z-20"
           >
             <div className="relative">
@@ -719,6 +725,7 @@ export default function Home() {
               isProject2InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
             }
             transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.02, y: -6 }}
             className="relative w-full max-w-[43.4375rem] lg:w-[43.4375rem] z-20"
           >
             <Image
@@ -737,6 +744,7 @@ export default function Home() {
               isProject2InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
             }
             transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ rotate: -1.5, scale: 1.02 }}
             className="relative w-full max-w-[23.0625rem] lg:w-[23.0625rem] z-20"
           >
             <div className="relative">
