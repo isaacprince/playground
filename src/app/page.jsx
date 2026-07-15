@@ -32,9 +32,13 @@ export default function Home() {
 
         <AnimatePresence mode="wait">
           <div className="relative pt-0 mt-10 bg-[#111111] h-full">
-            {/* Mobile hero — stacked layout */}
-            <div className="lg:hidden flex flex-col items-center px-4 pt-4 pb-24 gap-8" id="about">
+            {/* Mobile hero — WANTED polaroid only */}
+            <div
+              className="lg:hidden flex flex-col items-center justify-center gap-10 px-4 pb-10 min-h-[calc(100dvh-7.5rem)]"
+              id="about"
+            >
               <motion.div
+                className="w-full"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -42,68 +46,12 @@ export default function Home() {
                 <img
                   src="/prince.png"
                   alt="Prince Isaac"
-                  className="w-[14rem] sm:w-[18rem] mx-auto"
+                  className="w-[85%] max-w-[24rem] sm:max-w-[30rem] mx-auto"
                 />
               </motion.div>
 
               <motion.div
-                className="relative w-full max-w-[14rem] sm:max-w-[16rem]"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                <img src="/about.png" alt="" className="w-full" />
-                <p className="absolute top-[18%] left-[10%] right-[10%] text-[#333435] font-neueMachinaBold font-[800] text-[0.5rem] sm:text-[0.6rem] leading-snug">
-                  Prince operates at the intersection of two critical domains: the
-                  pursuit of enjoyment and the pragmatic resolution of business
-                  challenges through design. This approach enables Prince to deliver
-                  exceptional user experiences while effectively addressing the needs
-                  of the business.
-                </p>
-              </motion.div>
-
-              <motion.div
-                className="flex flex-wrap justify-center items-center gap-0 w-full max-w-[16rem] sm:max-w-xs"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                {[
-                  { href: "https://www.linkedin.com/in/prince-isaac/", src: "/linkedin.png", alt: "LinkedIn" },
-                  { href: "https://dribbble.com/princeisaac", src: "/dribble.png", alt: "Dribbble" },
-                  { href: "https://www.behance.net/princeisaac", src: "/behance.png", alt: "Behance" },
-                  { href: "https://github.com/isaacprince", src: "/github.png", alt: "GitHub" },
-                  { href: "mailto:isaacprince002@gmail.com", src: "/email.png", alt: "Email" },
-                ].map((link) => (
-                  <Link
-                    key={link.alt}
-                    target="_blank"
-                    href={link.href}
-                    className="w-[3.5rem] h-[3.5rem] sm:w-[4.5rem] sm:h-[4.5rem] -ml-2 sm:-ml-3 first:ml-0"
-                  >
-                    <img src={link.src} alt={link.alt} className="w-full h-full" />
-                  </Link>
-                ))}
-              </motion.div>
-
-              <div className="grid grid-cols-2 gap-3 w-full max-w-[14rem] sm:max-w-[17rem]">
-                <Link
-                  href="https://docs.google.com/document/d/1V71I5XEU6sNjQYbbp_OR01lRsljHkSKBH_HKVLuB3Gk/edit?tab=t.0"
-                  target="_blank"
-                >
-                  <img src="/cv.png" alt="CV" className="w-full" />
-                </Link>
-                <img src="/likes.png" alt="" className="w-full" />
-                <Link href="#projects">
-                  <img src="/work.png" alt="Selected work" className="w-full" />
-                </Link>
-                <Link href="/playground">
-                  <img src="/playground.png" alt="Playground" className="w-full" />
-                </Link>
-              </div>
-
-              <motion.div
-                className="w-[3rem] mt-4"
+                className="w-[3rem]"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
