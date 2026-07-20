@@ -32,33 +32,152 @@ export default function Home() {
 
         <AnimatePresence mode="wait">
           <div className="relative pt-0 mt-10 bg-[#111111] h-full">
-            {/* Mobile hero — WANTED polaroid only */}
+            {/* Mobile hero — WANTED polaroid with board atmosphere */}
             <div
-              className="lg:hidden flex flex-col items-center justify-center gap-10 px-4 pb-10 min-h-[calc(100dvh-7.5rem)]"
+              className="lg:hidden relative flex flex-col items-center justify-center gap-8 px-4 pb-10 overflow-hidden min-h-[calc(100dvh-7.5rem)]"
               id="about"
             >
-              <motion.div
-                className="w-full"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
+              {/* Atmosphere — warm glow + vignette so the board isn't flat black */}
+              <div aria-hidden className="pointer-events-none absolute inset-0">
+                <div
+                  className="absolute left-1/2 top-[42%] h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full"
+                  style={{
+                    background:
+                      "radial-gradient(circle, rgba(255,102,0,0.22) 0%, rgba(255,102,0,0.06) 42%, transparent 70%)",
+                  }}
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.55) 100%)",
+                  }}
+                />
+              </div>
+
+              {/* Red string threads — scrapbook / investigation board */}
+              <svg
+                aria-hidden
+                className="pointer-events-none absolute inset-0 h-full w-full"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
               >
-                <img
+                <motion.line
+                  x1="8"
+                  y1="18"
+                  x2="48"
+                  y2="42"
+                  stroke="#C41E1E"
+                  strokeWidth="0.35"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 0.85 }}
+                  transition={{ duration: 0.9, delay: 0.35 }}
+                />
+                <motion.line
+                  x1="92"
+                  y1="16"
+                  x2="55"
+                  y2="40"
+                  stroke="#C41E1E"
+                  strokeWidth="0.35"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 0.85 }}
+                  transition={{ duration: 0.9, delay: 0.45 }}
+                />
+                <motion.line
+                  x1="6"
+                  y1="78"
+                  x2="42"
+                  y2="58"
+                  stroke="#C41E1E"
+                  strokeWidth="0.35"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 0.75 }}
+                  transition={{ duration: 0.9, delay: 0.55 }}
+                />
+                <motion.line
+                  x1="94"
+                  y1="82"
+                  x2="58"
+                  y2="60"
+                  stroke="#C41E1E"
+                  strokeWidth="0.35"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 0.75 }}
+                  transition={{ duration: 0.9, delay: 0.65 }}
+                />
+              </svg>
+
+              {/* Pushpin dots at string ends */}
+              {[
+                { className: "left-[6%] top-[16%]", delay: 0.5 },
+                { className: "right-[6%] top-[14%]", delay: 0.6 },
+                { className: "left-[4%] bottom-[20%]", delay: 0.7 },
+                { className: "right-[4%] bottom-[16%]", delay: 0.8 },
+              ].map((pin) => (
+                <motion.span
+                  key={pin.className}
+                  aria-hidden
+                  className={`absolute z-10 h-2.5 w-2.5 rounded-full bg-[#C41E1E] ${pin.className}`}
+                  style={{ boxShadow: "0 0 10px rgba(196,30,30,0.7)" }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 320,
+                    damping: 16,
+                    delay: pin.delay,
+                  }}
+                />
+              ))}
+
+              <motion.div
+                className="relative z-20 w-full"
+                initial={{ opacity: 0, scale: 0.86, rotate: -4 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ type: "spring", stiffness: 110, damping: 14 }}
+              >
+                <motion.img
                   src="/prince.png"
                   alt="Prince Isaac"
-                  className="w-[85%] max-w-[24rem] sm:max-w-[30rem] mx-auto"
+                  className="mx-auto w-[88%] max-w-[26rem] sm:max-w-[32rem]"
+                  style={{ filter: "drop-shadow(0 18px 40px rgba(0,0,0,0.55))" }}
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{
+                    duration: 5.5,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                  }}
                 />
               </motion.div>
 
               <motion.div
-                className="w-[3rem]"
-                initial={{ opacity: 0, y: -20 }}
+                className="relative z-20 max-w-[16rem] text-center"
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.55 }}
+              >
+                <p className="font-neueMachina text-[0.85rem] leading-snug text-[#FF6600]">
+                  Product designer - London
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="relative z-20"
+                style={{ width: "3rem" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, y: [0, 8, 0] }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.8,
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatType: "reverse",
+                  opacity: { duration: 0.5, delay: 0.9 },
+                  y: {
+                    duration: 1.4,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                  },
                 }}
               >
                 <img src="/scroll.png" alt="" className="w-full" />
