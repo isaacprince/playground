@@ -8,7 +8,7 @@ export default function BackButton({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center gap-2 text-[#FF6600] font-neueMachina text-base hover:font-neueMachinaBold transition duration-300 ${className}`}
+      className={`inline-flex items-center gap-2 text-accent font-inter text-sm font-medium hover:opacity-80 transition-opacity ${className}`}
     >
       <span aria-hidden="true">←</span>
       {label}

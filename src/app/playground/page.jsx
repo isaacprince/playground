@@ -13,7 +13,7 @@ export default function Page() {
           <BackButton href="/" label="Back to home" className="mb-8" />
         </div>
         <div className="flex justify-center w-full">
-          <h1 className="text-[#FF6600] text-[1.75rem] sm:text-[2.5rem] font-black mb-[2.4375rem] font-neueMachina">
+          <h1 className="text-accent text-[1.75rem] sm:text-[2.5rem] font-black mb-[2.4375rem] font-neueMachina">
             Playground
           </h1>
         </div>
