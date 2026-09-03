@@ -21,13 +21,13 @@ const description =
   "Prince Isaac is a Product Designer working worldwide, who sits at the intersection of user enjoyment and business outcomes — shipping interfaces, design systems, and research-backed flows for startups and consultancies.";
 
 export const metadata = {
-  metadataBase: new URL("https://princeisaac.com"),
+  metadataBase: new URL("https://princeisaac.space"),
   title,
   description,
   openGraph: {
     title,
     description,
-    url: "https://princeisaac.com",
+    url: "https://princeisaac.space",
     siteName: "Prince Isaac",
     type: "website",
   },

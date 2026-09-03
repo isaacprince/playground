@@ -68,7 +68,7 @@ export default async function OpengraphImage() {
           <div
             style={{ width: 40, height: 3, backgroundColor: "#FF6600", display: "flex" }}
           />
-          <span style={{ fontSize: 26, color: "#9A9A9A" }}>princeisaac.com</span>
+          <span style={{ fontSize: 26, color: "#9A9A9A" }}>princeisaac.space</span>
         </div>
       </div>
     ),
