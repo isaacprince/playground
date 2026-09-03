@@ -6,6 +6,12 @@ import { SocialIcon } from "@/components/icons";
 import { nav as profile, socialLinks, projects } from "@/data/profile";
 import Reveal from "@/components/reveal";
 
+const heroStats = [
+  { value: "5+", label: "Shipped products" },
+  { value: "10x", label: "App growth delivered" },
+  { value: "Live", label: "Open-source system in production" },
+];
+
 const tools = [
   "Figma",
   "Miro",
@@ -77,6 +83,22 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.32}>
+          <div className="flex flex-wrap gap-x-12 gap-y-6 mt-14">
+            {heroStats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={i > 0 ? "sm:pl-12 sm:border-l sm:border-border" : ""}
+              >
+                <p className="font-neueMachina text-2xl sm:text-3xl text-accent mb-1">
+                  {stat.value}
+                </p>
+                <p className="font-inter text-sm text-muted">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </Reveal>
       </section>
