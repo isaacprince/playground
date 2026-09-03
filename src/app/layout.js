@@ -16,10 +16,26 @@ const neueMachinaBold = localFont({
   weight: "700",
 });
 
+const title = "Prince Isaac — Product Designer";
+const description =
+  "Prince Isaac is a Product Designer working worldwide, who sits at the intersection of user enjoyment and business outcomes — shipping interfaces, design systems, and research-backed flows for startups and consultancies.";
+
 export const metadata = {
-  title: "Prince Isaac — Product Designer",
-  description:
-    "Prince Isaac is a Product Designer working worldwide, who sits at the intersection of user enjoyment and business outcomes — shipping interfaces, design systems, and research-backed flows for startups and consultancies.",
+  metadataBase: new URL("https://princeisaac.com"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://princeisaac.com",
+    siteName: "Prince Isaac",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 const themeInitScript = `
