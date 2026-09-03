@@ -70,7 +70,7 @@ export default function Nav() {
             href={profile.resumeUrl}
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:inline-flex font-inter text-xs font-semibold text-ink bg-accent rounded-full px-4 py-2 hover:opacity-90 transition-opacity"
+            className="hidden sm:inline-flex font-inter text-xs font-semibold text-ink bg-accent rounded-full px-4 py-2 hover:bg-white transition-colors"
           >
             Résumé
           </a>
@@ -105,7 +105,7 @@ export default function Nav() {
             href={profile.resumeUrl}
             target="_blank"
             rel="noreferrer"
-            className="font-inter text-sm font-semibold text-ink bg-accent rounded-full px-5 py-2.5"
+            className="font-inter text-sm font-semibold text-ink bg-accent rounded-full px-5 py-2.5 hover:bg-white transition-colors"
           >
             Résumé
           </a>

@@ -32,7 +32,8 @@ export default function Home() {
         </Reveal>
         <Reveal delay={0.08}>
           <h1 className="font-neueMachina text-[2.25rem] sm:text-[3.25rem] lg:text-[4.25rem] leading-[1.08] text-paper max-w-4xl">
-            Product design that balances delight with business outcomes.
+            Product design that balances delight with{" "}
+            <span className="text-accent">business outcomes</span>.
           </h1>
         </Reveal>
         <Reveal delay={0.16}>
@@ -51,7 +52,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center gap-5 mt-10">
             <a
               href="#work"
-              className="font-inter text-sm font-semibold text-ink bg-accent rounded-full px-6 py-3 hover:opacity-90 transition-opacity"
+              className="font-inter text-sm font-semibold text-ink bg-accent rounded-full px-6 py-3 hover:bg-white transition-colors"
             >
               View my work
             </a>

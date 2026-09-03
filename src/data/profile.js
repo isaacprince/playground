@@ -24,7 +24,7 @@ export const projects = [
     role: "Product Designer",
     summary:
       "Onboarding, expense management, and dashboard design for a garage operations platform, built within an established visual system.",
-    outcome: "Ongoing engagement",
+    outcome: "Live product, shipping new features every sprint",
     image: "/combyn/project4.png",
     imageAlt: "Combyn Garage dashboard",
   },
@@ -35,7 +35,7 @@ export const projects = [
     role: "UI/UX Designer, User Research",
     summary:
       "End-to-end design for a food delivery app — from brand and UI kit through onboarding, checkout, and vendor tooling.",
-    outcome: "42 active vendors and 1,000+ downloads within a month of launch (10x growth)",
+    outcome: "10x app downloads and 75% vendor growth in the first month post-launch",
     image: "/project1.png",
     imageAlt: "Cravings mobile app",
   },
@@ -46,7 +46,7 @@ export const projects = [
     role: "Product Designer",
     summary:
       "A shared design system for Nigeria's federal government digital products, replacing inconsistent, one-off UI across agencies.",
-    outcome: "Live and open-source, built to unify design across government products",
+    outcome: "Live, open-source system replacing fragmented UI across federal agencies",
     image: "/project3.png",
     imageAlt: "Nigeria Design System",
   },

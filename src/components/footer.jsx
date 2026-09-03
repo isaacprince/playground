@@ -18,7 +18,8 @@ export default function Footer() {
           </h2>
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 font-inter text-sm font-semibold text-ink bg-accent rounded-full px-6 py-3 hover:opacity-90 transition-opacity"
+            aria-label={`Email ${profile.email}`}
+            className="inline-flex items-center gap-2 font-inter text-sm font-semibold text-ink bg-accent rounded-full px-6 py-3 hover:bg-white transition-colors"
           >
             Chat With Me
           </a>
