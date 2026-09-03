@@ -19,7 +19,7 @@ const neueMachinaBold = localFont({
 export const metadata = {
   title: "Prince Isaac — Product Designer",
   description:
-    "Prince Isaac is a London-based Product Designer who sits at the intersection of user enjoyment and business outcomes — shipping interfaces, design systems, and research-backed flows for startups and consultancies.",
+    "Prince Isaac is a Product Designer working worldwide, who sits at the intersection of user enjoyment and business outcomes — shipping interfaces, design systems, and research-backed flows for startups and consultancies.",
 };
 
 const themeInitScript = `
@@ -34,7 +34,7 @@ const themeInitScript = `
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>

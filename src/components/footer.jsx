@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <section
       id="contact"
-      className="border-t border-border bg-ink px-4 sm:px-8 py-20 md:py-28"
+      className="scroll-mt-16 border-t border-border bg-ink px-4 sm:px-8 py-20 md:py-28"
     >
       <div className="max-w-6xl mx-auto flex flex-col items-start gap-10">
         <div className="max-w-2xl">
@@ -20,7 +20,7 @@ export default function Footer() {
             href={`mailto:${profile.email}`}
             className="inline-flex items-center gap-2 font-inter text-sm font-semibold text-ink bg-accent rounded-full px-6 py-3 hover:opacity-90 transition-opacity"
           >
-            {profile.email}
+            Chat With Me
           </a>
         </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="font-inter text-xs text-muted">
-            © {new Date().getFullYear()} {profile.name}. Designed &amp; built in London.
+            © {new Date().getFullYear()} {profile.name}. Designed &amp; built worldwide.
           </p>
         </div>
       </div>

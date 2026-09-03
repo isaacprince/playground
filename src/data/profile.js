@@ -1,7 +1,7 @@
 export const nav = {
   name: "Prince Isaac",
   role: "Product Designer",
-  location: "London, UK",
+  location: "Worldwide",
   resumeUrl:
     "https://docs.google.com/document/d/1V71I5XEU6sNjQYbbp_OR01lRsljHkSKBH_HKVLuB3Gk/edit?tab=t.0",
   email: "isaacprince002@gmail.com",
