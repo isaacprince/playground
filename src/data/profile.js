@@ -3,7 +3,7 @@ export const nav = {
   role: "Product Designer",
   location: "Worldwide",
   resumeUrl:
-    "https://docs.google.com/document/d/1V71I5XEU6sNjQYbbp_OR01lRsljHkSKBH_HKVLuB3Gk/edit?tab=t.0",
+    "https://docs.google.com/document/d/1V71I5XEU6sNjQYbbp_OR01lRsljHkSKBH_HKVLuB3Gk/export?format=pdf",
   email: "isaacprince002@gmail.com",
 };
 
