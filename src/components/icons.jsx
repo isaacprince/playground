@@ -41,6 +41,12 @@ export function SocialIcon({ name, className = "w-5 h-5" }) {
           <path d="M4 3h4.4l4 5.6L17 3h3l-6.4 8.2L21 21h-4.4l-4.4-6.1L6.8 21H4l6.9-8.7L4 3Z" />
         </svg>
       );
+    case "Substack":
+      return (
+        <svg {...props} fill="currentColor" stroke="none">
+          <path d="M3 3.8h18v3.1H3V3.8Zm0 5.4h18v3.1H3V9.2Zm0 5.4h18v1.7l-9 5.9-9-5.9v-1.7Z" />
+        </svg>
+      );
     case "Medium":
       return (
         <svg {...props} fill="currentColor" stroke="none">

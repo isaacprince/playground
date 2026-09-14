@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import Cursor from "@/components/cursor";
+import SmoothScroll from "@/components/smooth-scroll";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -50,13 +52,15 @@ const themeInitScript = `
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body
         className={`${inter.className} ${inter.variable} ${neueMachina.variable} ${neueMachinaBold.variable}`}
       >
+        <SmoothScroll />
+        <Cursor />
         {children}
       </body>
     </html>

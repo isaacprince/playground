@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { nav as profile, socialLinks } from "@/data/profile";
 import { SocialIcon } from "@/components/icons";
+import Magnetic from "@/components/magnetic";
 
 export default function Footer() {
   return (
@@ -16,13 +17,15 @@ export default function Footer() {
           <h2 className="font-neueMachina text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] leading-[1.1] text-paper mb-8">
             Let&apos;s build something people actually enjoy using.
           </h2>
-          <a
-            href={`mailto:${profile.email}`}
-            aria-label={`Email ${profile.email}`}
-            className="inline-flex items-center gap-2 font-inter text-sm font-semibold text-ink bg-accent rounded-full px-6 py-3 hover:bg-white transition-colors"
-          >
-            Chat With Me
-          </a>
+          <Magnetic>
+            <a
+              href={`mailto:${profile.email}`}
+              aria-label={`Email ${profile.email}`}
+              className="inline-flex items-center gap-2 font-inter text-sm font-semibold text-ink bg-accent rounded-full px-6 py-3 hover:bg-white transition-colors"
+            >
+              Chat With Me
+            </a>
+          </Magnetic>
         </div>
 
         <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pt-10 border-t border-border">

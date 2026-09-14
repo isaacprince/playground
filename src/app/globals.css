@@ -38,6 +38,11 @@ body {
   color: #0b0b0c;
 }
 
+html.custom-cursor,
+html.custom-cursor * {
+  cursor: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

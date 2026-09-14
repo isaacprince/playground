@@ -13,8 +13,16 @@ export const socialLinks = [
   { name: "Behance", href: "https://www.behance.net/princeisaac" },
   { name: "GitHub", href: "https://github.com/isaacprince" },
   { name: "X", href: "https://x.com/izikprinx" },
+  { name: "Substack", href: "https://helloprince.substack.com" },
   { name: "Medium", href: "https://medium.com/@isaacprince002" },
 ];
+
+export const latestArticle = {
+  title: "From Figma to Production: Designing an AI-Assisted Frontend Workflow",
+  subtitle: "The difference between AI guessing and AI working from a source of truth.",
+  date: "July 30, 2026",
+  url: "https://helloprince.substack.com/p/from-figma-to-production-designing",
+};
 
 export const projects = [
   {

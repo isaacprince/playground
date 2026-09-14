@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { nav as profile } from "@/data/profile";
 import ThemeToggle from "@/components/theme-toggle";
+import Magnetic from "@/components/magnetic";
 
 export default function Nav() {
   const [time, setTime] = useState("");
@@ -38,6 +39,7 @@ export default function Nav() {
 
   const navItems = [
     { label: "Work", href: "/#work" },
+    { label: "Writing", href: "/#writing" },
     { label: "About", href: "/#about" },
     { label: "Contact", href: "/#contact" },
   ];
@@ -66,14 +68,16 @@ export default function Nav() {
           <span className="hidden sm:inline-flex items-center gap-1.5 font-inter text-xs text-muted border border-border rounded-full px-3 py-1.5">
             🌐 {city} · {time}
           </span>
-          <a
-            href={profile.resumeUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="hidden sm:inline-flex font-inter text-xs font-semibold text-ink bg-accent rounded-full px-4 py-2 hover:bg-white transition-colors"
-          >
-            Résumé
-          </a>
+          <Magnetic className="hidden sm:inline-block">
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex font-inter text-xs font-semibold text-ink bg-accent rounded-full px-4 py-2 hover:bg-white transition-colors"
+            >
+              Résumé
+            </a>
+          </Magnetic>
           <ThemeToggle />
 
           <button

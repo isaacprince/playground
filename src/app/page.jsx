@@ -1,10 +1,11 @@
 import Footer from "@/components/footer";
 import Nav from "@/components/nav";
-import Image from "next/image";
 import Link from "next/link";
 import { SocialIcon } from "@/components/icons";
-import { nav as profile, socialLinks, projects } from "@/data/profile";
+import { nav as profile, socialLinks, projects, latestArticle } from "@/data/profile";
 import Reveal from "@/components/reveal";
+import Magnetic from "@/components/magnetic";
+import ProjectList from "@/components/project-list";
 
 const heroStats = [
   { value: "5+", label: "Shipped products" },
@@ -56,20 +57,24 @@ export default function Home() {
 
         <Reveal delay={0.24}>
           <div className="flex flex-wrap items-center gap-5 mt-10">
-            <a
-              href="#work"
-              className="font-inter text-sm font-semibold text-ink bg-accent rounded-full px-6 py-3 hover:bg-white transition-colors"
-            >
-              View my work
-            </a>
-            <a
-              href={profile.resumeUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="font-inter text-sm font-semibold text-paper border border-border rounded-full px-6 py-3 hover:border-accent hover:text-accent transition-colors"
-            >
-              Résumé
-            </a>
+            <Magnetic>
+              <a
+                href="#work"
+                className="font-inter text-sm font-semibold text-ink bg-accent rounded-full px-6 py-3 hover:bg-white transition-colors"
+              >
+                View my work
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a
+                href={profile.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="font-inter text-sm font-semibold text-paper border border-border rounded-full px-6 py-3 hover:border-accent hover:text-accent transition-colors"
+              >
+                Résumé
+              </a>
+            </Magnetic>
             <div className="flex items-center gap-4 ml-1">
               {socialLinks.map((social) => (
                 <Link
@@ -116,46 +121,71 @@ export default function Home() {
           </div>
         </Reveal>
 
-        <div className="flex flex-col gap-6">
-          {projects.map((project, i) => (
-            <Reveal key={project.slug} delay={Math.min(i * 0.08, 0.32)}>
-              <Link
-                href={`/case-studies/${project.slug}/`}
-                className="group grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-6 md:gap-10 items-center rounded-2xl border border-border bg-surface p-5 sm:p-7 transition-all duration-300 hover:border-accent/60 hover:-translate-y-1 hover:shadow-[0_20px_60px_-25px_rgba(255,102,0,0.45)]"
-              >
-                <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl bg-black">
-                  <Image
-                    src={project.image}
-                    alt={project.imageAlt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                </div>
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-neueMachina text-xl sm:text-2xl text-paper">
-                      {project.title}
-                    </h3>
-                    <span className="font-inter text-xs text-muted">{project.year}</span>
-                  </div>
-                  <p className="font-inter text-sm text-muted mb-2">{project.role}</p>
-                  <p className="font-inter text-base text-paper/90 leading-relaxed mb-4">
-                    {project.summary}
-                  </p>
-                  <p className="font-inter text-sm text-accent mb-5">{project.outcome}</p>
-                  <span className="inline-flex items-center gap-2 font-inter text-sm font-semibold text-paper group-hover:text-accent transition-colors">
-                    View case study
-                    <SocialIcon
-                      name="Arrow"
-                      className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={0.08}>
+          <ProjectList projects={projects} />
+        </Reveal>
+      </section>
+
+      {/* Writing */}
+      <section id="writing" className="scroll-mt-16 max-w-6xl mx-auto px-4 sm:px-8 py-20 md:py-28 border-t border-border">
+        <Reveal>
+          <div className="flex items-end justify-between mb-10">
+            <h2 className="font-neueMachina text-2xl sm:text-3xl text-paper">
+              Writing
+            </h2>
+            <Link
+              href={socialLinks.find((s) => s.name === "Substack")?.href ?? "#"}
+              target="_blank"
+              rel="noreferrer"
+              className="hidden sm:inline-flex items-center gap-2 font-inter text-sm text-muted hover:text-accent transition-colors"
+            >
+              All posts on Substack
+              <SocialIcon name="Arrow" className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.08}>
+          <a
+            href={latestArticle.url}
+            target="_blank"
+            rel="noreferrer"
+            data-cursor="view"
+            className="group flex flex-col gap-4 rounded-2xl border border-border bg-surface p-6 sm:p-8 transition-all duration-300 hover:border-accent/60 hover:-translate-y-1 hover:shadow-[0_20px_60px_-25px_rgba(255,102,0,0.45)]"
+          >
+            <p className="font-inter text-xs uppercase tracking-widest text-accent">
+              Latest on Substack
+            </p>
+            <h3 className="font-neueMachina text-xl sm:text-2xl text-paper max-w-2xl group-hover:text-accent transition-colors">
+              {latestArticle.title}
+            </h3>
+            <p className="font-inter text-base text-muted max-w-2xl leading-relaxed">
+              {latestArticle.subtitle}
+            </p>
+            <div className="flex items-center justify-between mt-2">
+              <span className="font-inter text-sm text-muted">{latestArticle.date}</span>
+              <span className="inline-flex items-center gap-2 font-inter text-sm font-semibold text-paper group-hover:text-accent transition-colors">
+                Read the post
+                <SocialIcon
+                  name="Arrow"
+                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </span>
+            </div>
+          </a>
+        </Reveal>
+
+        <Reveal delay={0.12}>
+          <Link
+            href={socialLinks.find((s) => s.name === "Substack")?.href ?? "#"}
+            target="_blank"
+            rel="noreferrer"
+            className="sm:hidden mt-6 inline-flex items-center gap-2 font-inter text-sm text-muted hover:text-accent transition-colors"
+          >
+            All posts on Substack
+            <SocialIcon name="Arrow" className="w-3.5 h-3.5" />
+          </Link>
+        </Reveal>
       </section>
 
       {/* About */}
