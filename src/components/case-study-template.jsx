@@ -4,6 +4,7 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import BackButton from "@/components/back-button";
 import { SocialIcon } from "@/components/icons";
+import WireframeCompare from "@/components/wireframe-compare";
 
 function Gallery({ images }) {
   if (!images?.length) return null;
@@ -106,6 +107,7 @@ export default function CaseStudyTemplate({
                   </ul>
                 )}
               </div>
+              <WireframeCompare items={section.compare} />
               <Stats stats={section.stats} />
               <Gallery images={section.images} />
               {section.link && (

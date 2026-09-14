@@ -16,9 +16,9 @@ const neueMachinaBold = localFont({
   weight: "700",
 });
 
-const title = "Prince Isaac — Product Designer";
+const title = "Prince Isaac, Product Designer";
 const description =
-  "Prince Isaac is a Product Designer working worldwide, who sits at the intersection of user enjoyment and business outcomes — shipping interfaces, design systems, and research-backed flows for startups and consultancies.";
+  "Prince Isaac is a Product Designer working worldwide, who sits at the intersection of user enjoyment and business outcomes, shipping interfaces, design systems, and research-backed flows for startups and consultancies.";
 
 export const metadata = {
   metadataBase: new URL("https://princeisaac.space"),

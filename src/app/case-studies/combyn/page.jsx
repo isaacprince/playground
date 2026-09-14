@@ -6,18 +6,18 @@ export default function CombynCaseStudy() {
   return (
     <CaseStudyTemplate
       title="Combyn Garage"
-      subtitle="Product design for a garage operations platform — onboarding, expense management, and the core dashboard experience, built within an established visual system."
+      subtitle="Product design for a garage operations platform: onboarding, expense management, and the core dashboard experience, built within an established visual system."
       meta={[
         { label: "Role", value: "Product Designer" },
         { label: "Client", value: "Combyn, via Alexandra & Ike Consultancy" },
-        { label: "Timeline", value: "September 2025 — Present" },
+        { label: "Timeline", value: "September 2025 to Present" },
         { label: "Tools", value: "Figma, Miro, Adobe CC, Sketch" },
       ]}
       sections={[
         {
           heading: "Context",
           body: [
-            "As Product Designer at Alexandra & Ike Consultancy, I work in a remote-first, multidisciplinary team designing and refining digital experiences for Combyn — a garage operations platform — within an already-established visual system.",
+            "As Product Designer at Alexandra & Ike Consultancy, I work in a remote-first, multidisciplinary team designing and refining digital experiences for Combyn, a garage operations platform, within an already-established visual system.",
           ],
         },
         {
@@ -71,11 +71,11 @@ export default function CombynCaseStudy() {
         {
           heading: "Status",
           body: [
-            "This is an ongoing engagement — the platform continues to evolve with new features and refinements each sprint.",
+            "This is an ongoing engagement. The platform continues to evolve with new features and refinements each sprint.",
           ],
         },
       ]}
-      nextProject={{ slug: "cravings", title: "Cravings" }}
+      nextProject={{ slug: "afro-eats", title: "Afro Eats" }}
     />
   );
 }

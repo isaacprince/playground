@@ -17,21 +17,21 @@ export default function NdsCaseStudy() {
         {
           heading: "Overview",
           body: [
-            "A design system is a shared set of standards, guidelines, and reusable components that helps teams design and build digital products more efficiently and consistently — a single source of truth for typography, colour, layout, and interaction patterns.",
+            "A design system is a shared set of standards, guidelines, and reusable components that helps teams design and build digital products more efficiently and consistently: a single source of truth for typography, colour, layout, and interaction patterns.",
           ],
           images: [{ src: img("banner.png"), alt: "Nigeria Design System banner" }],
         },
         {
           heading: "The problem",
           body: [
-            "The federal government of Nigeria operates numerous websites and digital applications, each with its own design language and user experience. That inconsistency is confusing and frustrating for citizens trying to access government services online, and it leads to wasted effort — designers were recreating the same common UI elements and patterns for every new project.",
+            "The federal government of Nigeria operates numerous websites and digital applications, each with its own design language and user experience. That inconsistency is confusing and frustrating for citizens trying to access government services online, and it leads to wasted effort: designers were recreating the same common UI elements and patterns for every new project.",
           ],
           images: [{ src: img("problem.png"), alt: "Illustration of the inconsistency problem" }],
         },
         {
           heading: "Approach",
           body: [
-            "We proposed building a design system with a shared set of visual design principles and styles, plus a library of reusable UI components and patterns for use across all federal government digital products — improving the experience for citizens and increasing efficiency for government design and development teams.",
+            "We proposed building a design system with a shared set of visual design principles and styles, plus a library of reusable UI components and patterns for use across all federal government digital products, improving the experience for citizens and increasing efficiency for government design and development teams.",
             "The team consisted of a product manager, brand designers, product designers, UX and content writers, and illustrators.",
           ],
         },
@@ -58,7 +58,7 @@ export default function NdsCaseStudy() {
         {
           heading: "Design",
           body: [
-            "We started with foundations — colour, typography, grid and space, and icons — then identified the most commonly used UI components and patterns across federal government platforms and built them into a shared library.",
+            "We started with foundations (colour, typography, grid and space, and icons), then identified the most commonly used UI components and patterns across federal government platforms and built them into a shared library.",
             "Finally, we documented everything so teams could find and use the system's resources, including guidelines for each component and a process for submitting new components or change requests.",
           ],
           images: [
@@ -70,7 +70,7 @@ export default function NdsCaseStudy() {
         {
           heading: "Outcome",
           body: [
-            "The design system is live and open to contributors who want to help maintain and scale it — a shared foundation for consistent, cohesive government digital products instead of every team rebuilding the same UI from scratch.",
+            "The design system is live and open to contributors who want to help maintain and scale it, a shared foundation for consistent, cohesive government digital products instead of every team rebuilding the same UI from scratch.",
           ],
           link: {
             href: "https://naijadesignsystem.webflow.io/",

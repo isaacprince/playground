@@ -20,7 +20,7 @@ export const projects = [
   {
     slug: "combyn",
     title: "Combyn Garage",
-    year: "2025 — Present",
+    year: "2025 to Present",
     role: "Product Designer",
     summary:
       "Onboarding, expense management, and dashboard design for a garage operations platform, built within an established visual system.",
@@ -29,15 +29,26 @@ export const projects = [
     imageAlt: "Combyn Garage dashboard",
   },
   {
+    slug: "afro-eats",
+    title: "Afro Eats",
+    year: "2024",
+    role: "UI/UX Designer",
+    summary:
+      "A concept design for a food delivery app: brand, UI kit, user flow, and full ordering journey from discovery through delivery tracking.",
+    outcome: "Personal concept project, iOS app",
+    image: "/afro-eats/mockup.jpg",
+    imageAlt: "Afro Eats mobile app concept",
+  },
+  {
     slug: "cravings",
     title: "Cravings",
     year: "2022",
     role: "UI/UX Designer, User Research",
     summary:
-      "End-to-end design for a food delivery app — from brand and UI kit through onboarding, checkout, and vendor tooling.",
+      "End-to-end design for a food delivery app: from brand and UI kit through onboarding, checkout, and vendor tooling.",
     outcome: "10x app downloads and 75% vendor growth in the first month post-launch",
-    image: "/project1.png",
-    imageAlt: "Cravings mobile app",
+    image: "/cravings/uikit.png",
+    imageAlt: "Cravings UI kit",
   },
   {
     slug: "nds",
@@ -47,7 +58,7 @@ export const projects = [
     summary:
       "A shared design system for Nigeria's federal government digital products, replacing inconsistent, one-off UI across agencies.",
     outcome: "Live, open-source system replacing fragmented UI across federal agencies",
-    image: "/project3.png",
+    image: "/nds/hero.png",
     imageAlt: "Nigeria Design System",
   },
 ];

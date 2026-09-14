@@ -6,7 +6,7 @@ export default function CravingsCaseStudy() {
   return (
     <CaseStudyTemplate
       title="Cravings"
-      subtitle="Satisfy your cravings, pronto — get food delivered to your doorstep."
+      subtitle="Satisfy your cravings, pronto: get food delivered to your doorstep."
       meta={[
         { label: "Role", value: "UI/UX Designer, User Research" },
         { label: "Team", value: "PM, iOS/Android & web engineers" },
@@ -61,7 +61,7 @@ export default function CravingsCaseStudy() {
         {
           heading: "Results",
           body: [
-            "One month after launch, growth held up: active vendors grew from 24 to 42 (+75%) and app downloads grew from 100 to 1,000 — a 10x increase — while holding steady at 6 locations. The vendor network also diversified, with a wider mix of vendor types available at the one-month mark than at launch.",
+            "One month after launch, growth held up: active vendors grew from 24 to 42 (+75%) and app downloads grew from 100 to 1,000 (a 10x increase) while holding steady at 6 locations. The vendor network also diversified, with a wider mix of vendor types available at the one-month mark than at launch.",
           ],
           stats: [
             { value: "42", label: "Active vendors (+75%)" },
