@@ -78,7 +78,7 @@ export default function NdsCaseStudy() {
           },
         },
       ]}
-      nextProject={{ slug: "combyn", title: "Combyn Garage" }}
+      nextProject={{ slug: "ecospaces", title: "Ecospaces" }}
     />
   );
 }

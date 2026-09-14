@@ -26,6 +26,17 @@ export const latestArticle = {
 
 export const projects = [
   {
+    slug: "ecospaces",
+    title: "Ecospaces",
+    year: "January 2026 to Present",
+    role: "Senior Product Designer (Design Engineer)",
+    summary:
+      "Design-engineering an AI-powered sustainable event planning platform: designing in Figma and using Claude, React, and TypeScript to ship working prototypes and frontend components.",
+    outcome: "Pre-launch, waitlist live for early access",
+    image: "/ecospaces/Frame 427319352.png",
+    imageAlt: "Ecospaces AI planning workspace",
+  },
+  {
     slug: "combyn",
     title: "Combyn Garage",
     year: "2025 to Present",

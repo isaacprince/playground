@@ -52,6 +52,28 @@ function Stats({ stats }) {
   );
 }
 
+function FeatureGrid({ items }) {
+  if (!items?.length) return null;
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+      {items.map((item) => (
+        <div
+          key={item.title}
+          className="rounded-2xl border border-border bg-surface p-5 transition-colors duration-300 hover:border-accent/50"
+        >
+          {item.badge && (
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-accent/15 text-accent font-inter text-xs font-semibold mb-3">
+              {item.badge}
+            </span>
+          )}
+          <h3 className="font-neueMachina text-base text-paper mb-1.5">{item.title}</h3>
+          <p className="font-inter text-sm text-muted leading-relaxed">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function CaseStudyTemplate({
   title,
   subtitle,
@@ -111,7 +133,9 @@ export default function CaseStudyTemplate({
               <WireframeCompare items={section.compare} />
               <Stats stats={section.stats} />
               <PhoneStrip items={section.phoneStrip} />
+              <FeatureGrid items={section.features} />
               <Gallery images={section.images} />
+              {section.custom}
               {section.link && (
                 <a
                   href={section.link.href}
