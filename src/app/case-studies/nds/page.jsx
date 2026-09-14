@@ -8,7 +8,7 @@ export default function NdsCaseStudy() {
       title="Nigeria Design System"
       subtitle="Making the design system that works."
       meta={[
-        { label: "Role", value: "Product Designer" },
+        { label: "Role", value: "Product Designer, User Research" },
         { label: "Team", value: "PM, brand & product designers, UX/content writers, illustrators" },
         { label: "Client", value: "Nigerian federal government digital products" },
         { label: "Status", value: "Live & open-source" },

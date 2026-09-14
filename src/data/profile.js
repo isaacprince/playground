@@ -1,6 +1,6 @@
 export const nav = {
   name: "Prince Isaac",
-  role: "Product Designer",
+  role: "Product Designer & UX Researcher",
   location: "Worldwide",
   resumeUrl:
     "https://docs.google.com/document/d/1V71I5XEU6sNjQYbbp_OR01lRsljHkSKBH_HKVLuB3Gk/export?format=pdf",
@@ -73,7 +73,7 @@ export const projects = [
     slug: "nds",
     title: "Nigeria Design System",
     year: "2022",
-    role: "Product Designer",
+    role: "Product Designer, User Research",
     summary:
       "A shared design system for Nigeria's federal government digital products, replacing inconsistent, one-off UI across agencies.",
     outcome: "Live, open-source system replacing fragmented UI across federal agencies",

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Prince Isaac, Product Designer";
+export const alt = "Prince Isaac, Product Designer & UX Researcher";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -36,7 +36,7 @@ export default async function OpengraphImage() {
             }}
           />
           <span style={{ fontSize: 28, color: "#9A9A9A" }}>
-            Product Designer · Worldwide
+            Product Designer &amp; UX Researcher · Worldwide
           </span>
         </div>
 

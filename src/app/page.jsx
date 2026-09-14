@@ -34,7 +34,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 sm:px-8 pt-20 pb-24 md:pt-32 md:pb-32">
         <Reveal delay={0}>
           <p className="font-inter text-sm text-accent mb-6">
-            Product Designer · Worldwide
+            Product Designer &amp; UX Researcher · Worldwide
           </p>
         </Reveal>
         <Reveal delay={0.08}>
@@ -201,6 +201,11 @@ export default function Home() {
               means getting into the weeds with stakeholders, translating
               messy requirements into clear flows, and keeping design systems
               organised enough that other people can actually build on them.
+            </p>
+            <p className="font-inter text-lg text-paper/90 leading-relaxed mb-6">
+              Design decisions are backed by research, not guesswork: user
+              interviews, usability testing, and synthesis that shape a flow
+              before it&apos;s finalised, not a report written after the fact.
             </p>
             <p className="font-inter text-lg text-paper/90 leading-relaxed mb-10">
               I work with clients worldwide and am open to remote work
