@@ -50,8 +50,8 @@ export default function Home() {
             business problems, not just shipping pretty screens.
           </p>
           <p className="font-inter text-sm text-muted max-w-2xl mt-4">
-            Currently designing at Alexandra &amp; Ike Consultancy · Past work
-            spans food delivery, DeFi, and government design systems.
+            Currently designing at Ecospaces · Past work spans food delivery,
+            DeFi, government design systems, and SAAS operations.
           </p>
         </Reveal>
 
